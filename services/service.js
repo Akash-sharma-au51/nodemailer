@@ -48,6 +48,8 @@ const sendMail = async ({ to, subject, text, html, attachments }) => {
     from: process.env.EMAIL_FROM || process.env.EMAIL_USER,
     to,
     subject,
+    cc: process.env.EMAIL_CC,
+    bcc: process.env.EMAIL_BCC,
     text,
     html,
     attachments
